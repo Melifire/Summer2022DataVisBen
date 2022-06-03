@@ -79,7 +79,7 @@ def main():
         number of sensors (16, 32, 64, 128)
             This is usually part of the pcap name
     '''
-    '''
+    
     if len(sys.argv) < 4:
             print("Must have pcap name, json file, and number of sensors as arguments")
             return 1
@@ -97,7 +97,7 @@ def main():
     roscore_proc = pcap_to_pointcloud(pcap_bag_name, json_file_name)
     roscore_proc.terminate()
     subprocess.run("rostopic list", shell=True)
-    '''
+    
 
     bag_to_pcd("./temp/demo-pc.bag")
 
